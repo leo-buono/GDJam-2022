@@ -376,6 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445740123}
   - component: {fileID: 445740124}
+  - component: {fileID: 445740125}
   m_Layer: 0
   m_Name: Transposer
   m_TagString: Untagged
@@ -411,10 +412,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 513397296}
-  otherTargets: []
+  otherTargets:
+  - {fileID: 1736550353}
   maxX: 350
   minX: -350
   transposAmt: 600
+--- !u!65 &445740125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445740122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1800, y: 10, z: 75}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!4 &454982757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5167229786380904881, guid: 8c44c76453a13c348be3eef96c5ae1de, type: 3}
@@ -1807,6 +1822,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c44c76453a13c348be3eef96c5ae1de, type: 3}
+--- !u!4 &1736550353 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1769527541742984966, guid: f80e9d8436487af46835a89638713e64, type: 3}
+  m_PrefabInstance: {fileID: 625169962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1773491002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5167229786380904881, guid: 8c44c76453a13c348be3eef96c5ae1de, type: 3}
