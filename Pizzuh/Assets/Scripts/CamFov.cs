@@ -18,7 +18,7 @@ public class CamFov : MonoBehaviour
 
 	private void Awake() {
 		follow = cam.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
-		firstPerson.started += ctx => follow.CameraDistance = 0f;
+		firstPerson.started += ctx => follow.CameraDistance = 0.5f;
 		firstPerson.canceled += ctx => follow.CameraDistance = followDistance;
 	}
 

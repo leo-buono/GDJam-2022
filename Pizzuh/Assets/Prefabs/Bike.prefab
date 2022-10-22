@@ -9999,7 +9999,7 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 5
+  m_HorizontalDamping: 1
   m_VerticalDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
@@ -10225,7 +10225,7 @@ MonoBehaviour:
   jumpForce: 50
   maxSpeed: 25
   accelVelo: 0
-  angularVelo: 1
+  angularVelo: 0
 --- !u!1 &6205442582500240183
 GameObject:
   m_ObjectHideFlags: 0
@@ -10293,6 +10293,7 @@ MonoBehaviour:
   wheel: {fileID: 7730950071432910382}
   steering: 0
   controlled: 1
+  autoAccel: 0
   acceleration: 200
   decceleration: 500
   maxSpeed: 720
@@ -10408,6 +10409,7 @@ MonoBehaviour:
   wheel: {fileID: 4502880053187072109}
   steering: 1
   controlled: 1
+  autoAccel: 0
   acceleration: 200
   decceleration: 500
   maxSpeed: 720

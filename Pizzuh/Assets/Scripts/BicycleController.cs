@@ -20,14 +20,14 @@ public class BicycleController : MonoBehaviour
 
 	[SerializeField]	float maxSpeed = 30f;
 
-	[HideInInspector]	public float accelVelo;
+	public float accelVelo = 1f;
 
-	[HideInInspector]	public float angularVelo = 1f;
+	public float angularVelo = 1f;
 
 	private void Awake() {
 		rb.centerOfMass = centerOfMass.localPosition;
 
-		angularVelo = 1f;
+		angularVelo = 0f;
 		rotate.performed += ctx => {
 			float angle = ctx.ReadValue<float>();
 			rotationPoint.localRotation = Quaternion.Euler(0f, angle * rotAngle, 0f);
@@ -40,13 +40,9 @@ public class BicycleController : MonoBehaviour
 			angularVelo = 0f;
 		};
 
-		accelVelo = 1f;
-		accelerate.performed += ctx => {
-			accelVelo = (0.5f + ctx.ReadValue<float>());
-		};
-		accelerate.canceled += ctx => {
-			accelVelo = 1f;
-		};
+		accelVelo = 0f;
+		accelerate.performed += ctx => accelVelo = ctx.ReadValue<float>();
+		accelerate.canceled += ctx => accelVelo = 0f;
 
 		jump.started += ctx => 
 		{
