@@ -16,7 +16,7 @@ public class Spedometer : MonoBehaviour
     [SerializeField] private float bounceSpd = 1;
     
     [Range(0.01f, 1f)]
-    [SerializeField] public float bounceMax = 0f;
+    [SerializeField] public float bounceMax = 0.08f;
     private float speed = 0f;
     private float fill = 0f;
     private bool isBouncing = false;
@@ -52,7 +52,7 @@ public class Spedometer : MonoBehaviour
             spdHoop.color = Color.white;
         }
 
-        if (fill > spdFillMax)
+        if (fill >= spdFillMax)
         {
             isBouncing = true;
             bounceAmount = Random.Range(0.01f, bounceMax);
