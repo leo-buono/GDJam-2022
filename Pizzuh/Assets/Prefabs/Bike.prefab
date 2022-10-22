@@ -187,6 +187,7 @@ MonoBehaviour:
     m_Flags: 0
   rb: {fileID: 6205442582339244655}
   cam: {fileID: 1847618873866612521}
+  followObj: {fileID: 489290039884782516}
   maxSpeed: 20
   minFov: 60
   maxFov: 130
@@ -5031,8 +5032,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2899112284992397569}
-  m_LocalRotation: {x: -0, y: 0.7071069, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -302.62, y: 14.139999, z: 5.0000005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10293,7 +10294,7 @@ MonoBehaviour:
   wheel: {fileID: 7730950071432910382}
   steering: 0
   controlled: 1
-  autoAccel: 0
+  autoAccel: 1
   acceleration: 200
   decceleration: 500
   maxSpeed: 720
@@ -10409,7 +10410,7 @@ MonoBehaviour:
   wheel: {fileID: 4502880053187072109}
   steering: 1
   controlled: 1
-  autoAccel: 0
+  autoAccel: 1
   acceleration: 200
   decceleration: 500
   maxSpeed: 720
