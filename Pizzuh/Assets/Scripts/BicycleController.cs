@@ -20,6 +20,7 @@ public class BicycleController : MonoBehaviour
 
 	[HideInInspector]	public float angularVelo = 1f;
 
+
 	private void Awake() {
 		rb.centerOfMass = centerOfMass.localPosition;
 
@@ -64,4 +65,6 @@ public class BicycleController : MonoBehaviour
 		//clamp speed
 		rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 	}
+
+	public float GetMaxSpeed() { return maxSpeed; }
 }
