@@ -9811,6 +9811,23 @@ MonoBehaviour:
       m_Action: Accelerate
       m_Flags: 8
     m_Flags: 0
+  jump:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 749a7234-7091-48d1-a32a-296f9f30d4c3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 95cfee3d-16f5-4317-8327-4e7adc8d1a80
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Jump
+      m_Flags: 0
+    m_Flags: 0
   speed: 3
   rotationPoint: {fileID: 6205442583217779242}
   centerOfMass: {fileID: 6205442582666556553}

@@ -8,12 +8,16 @@ public class BicycleController : MonoBehaviour
 	[SerializeField]	Rigidbody rb;
 	[SerializeField]	InputAction rotate;
 	[SerializeField]	InputAction accelerate;
+	[SerializeField]	InputAction jump;
+
 	public float speed = 5f;
 	[SerializeField]	Transform rotationPoint;
 	[SerializeField]	Transform centerOfMass;
 	[SerializeField]	float rotAngle = 15f;
 	[SerializeField]	float rotForce = 5f;
 	[SerializeField]	float fixForce = 5f;
+	[SerializeField]	float jumpForce = 5f; //Get it? Because the game
+
 	[SerializeField]	float maxSpeed = 30f;
 
 	[HideInInspector]	public float accelVelo;
@@ -43,16 +47,25 @@ public class BicycleController : MonoBehaviour
 		accelerate.canceled += ctx => {
 			accelVelo = 1f;
 		};
+
+		jump.started += ctx => 
+		{
+			//jumping and stuff like that (it's relative to the direction of the player)
+			rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+		};
 	}
 
 	private void OnEnable() {
 		rotate.Enable();
 		accelerate.Enable();
+		jump.Enable();
 	}
 
 	private void OnDisable() {
 		rotate.Disable();
 		accelerate.Disable();
+		jump.Disable();
+
 	}
 
 	float tilt;
