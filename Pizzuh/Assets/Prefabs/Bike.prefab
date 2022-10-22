@@ -10204,6 +10204,7 @@ MonoBehaviour:
   rotAngle: 30
   rotForce: 5
   fixForce: 5
+  jumpForce: 50
   maxSpeed: 25
   accelVelo: 0
   angularVelo: 1

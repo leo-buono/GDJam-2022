@@ -51,7 +51,8 @@ public class BicycleController : MonoBehaviour
 		jump.started += ctx => 
 		{
 			//jumping and stuff like that (it's relative to the direction of the player)
-			rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+			if (groundedCount > 0)
+				rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 		};
 	}
 
@@ -86,5 +87,14 @@ public class BicycleController : MonoBehaviour
 
 		//clamp speed
 		rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+	}
+
+	int groundedCount = 0;
+	private void OnCollisionEnter(Collision other) {
+		++groundedCount;
+	}
+
+	private void OnCollisionExit(Collision other) {
+		--groundedCount;
 	}
 }

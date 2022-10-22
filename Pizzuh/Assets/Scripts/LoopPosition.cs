@@ -6,9 +6,15 @@ public class LoopPosition : MonoBehaviour
 {
 	public Transform target;
 	public Transform[] otherTargets;
-	public float maxX = 350f;
-	public float minX = -350f;
+	public float maxX = 305f;
+	public float minX = -305f;
 	public float transposAmt = 600f;
+	static public LoopPosition instance;
+
+	private void Awake() {
+		instance = this;
+	}
+
 	private void Update() {
 		if (target.position.x > maxX) {
 			target.position += Vector3.left * transposAmt;
