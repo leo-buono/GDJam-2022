@@ -16,6 +16,7 @@ public class BicycleWheel : MonoBehaviour
 			bikeBod.AddForce(transform.forward * bike.speed * bike.accelVelo, ForceMode.Acceleration);
 		else
 			bikeBod.AddForce(transform.forward * bike.speed, ForceMode.Acceleration);
+			
 		if (steering)
 			bikeBod.AddRelativeTorque(Vector3.up * bike.angularVelo, ForceMode.Acceleration);
 	}

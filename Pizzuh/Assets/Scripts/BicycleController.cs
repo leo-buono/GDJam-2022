@@ -58,8 +58,10 @@ public class BicycleController : MonoBehaviour
 	float tilt;
 	private void FixedUpdate() {
 		tilt = Vector3.SignedAngle(Vector3.up, transform.up, transform.forward);
-		if (Mathf.Abs(tilt) > 1f)
+		if (Mathf.Abs(tilt) > 2f)
 			rb.AddRelativeTorque((Vector3.forward * -tilt).normalized * fixForce);
+		else
+			rb.AddRelativeTorque(Vector3.forward * -tilt);
 
 		//clamp speed
 		rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
