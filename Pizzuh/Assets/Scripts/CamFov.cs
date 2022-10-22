@@ -9,9 +9,10 @@ public class CamFov : MonoBehaviour
 	[SerializeField]	float maxSpeed = 50f;
 	[SerializeField]	float minFov = 60f;
 	[SerializeField]	float maxFov = 130f;
+	[SerializeField]	float catchupSpeed = 50f;
 
     void Update()
     {
-        cam.fieldOfView = Mathf.Lerp(minFov, maxFov, rb.velocity.sqrMagnitude / (maxSpeed * maxSpeed));
+        cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, Mathf.Lerp(minFov, maxFov, rb.velocity.sqrMagnitude / (maxSpeed * maxSpeed)), Time.deltaTime * catchupSpeed);
     }
 }
