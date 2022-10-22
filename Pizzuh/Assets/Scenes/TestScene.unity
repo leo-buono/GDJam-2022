@@ -7034,6 +7034,7 @@ MonoBehaviour:
   spdMult: 1.3
   redZone: 0.85
   bounceSpd: 1
+  bounceMax: 0.08
 --- !u!1 &255282435
 GameObject:
   m_ObjectHideFlags: 0

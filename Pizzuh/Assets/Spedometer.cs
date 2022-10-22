@@ -14,6 +14,7 @@ public class Spedometer : MonoBehaviour
     [SerializeField] private float spdMult = 1.3f;
     [SerializeField] private float redZone = 0.85f;
     [SerializeField] private float bounceSpd = 1;
+    [SerializeField] private float bounceMax = 0f;
     private float speed = 0f;
     private float maxSpeed = 0f;
     private float fill = 0f;
@@ -55,7 +56,7 @@ public class Spedometer : MonoBehaviour
         if (fill > spdFillMax)
         {
             isBouncing = true;
-            bounceAmount = Random.Range(0f, 0.08f);
+            bounceAmount = Random.Range(0f, bounceMax);
         }
         else if (fill < spdFillMax - bounceAmount && isBouncing) 
         {
