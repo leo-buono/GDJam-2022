@@ -14,7 +14,7 @@ public class BicycleController : MonoBehaviour
 	[SerializeField]	Transform rotationPoint;
 	[SerializeField]	Transform centerOfMass;
 	[SerializeField]	float rotAngle = 15f;
-	[SerializeField]	float rotForce = 5f;
+	[SerializeField]    float rotForce = 5f;
 	[SerializeField]	float fixForce = 5f;
 	[SerializeField]	float jumpForce = 5f; //Get it? Because the game
 
@@ -23,6 +23,7 @@ public class BicycleController : MonoBehaviour
 	public float accelVelo = 1f;
 
 	public float angularVelo = 1f;
+
 
 	private void Awake() {
 		rb.centerOfMass = centerOfMass.localPosition;
@@ -84,6 +85,8 @@ public class BicycleController : MonoBehaviour
 		//clamp speed
 		rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 	}
+
+	public float GetMaxSpeed() { return maxSpeed; }
 
 	int groundedCount = 0;
 	private void OnCollisionEnter(Collision other) {
