@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8577416303158434788}
   - component: {fileID: 7591484724050236263}
   - component: {fileID: 3004524897762455952}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: street lamp 2 prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

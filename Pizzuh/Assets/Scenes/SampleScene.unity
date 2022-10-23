@@ -474,7 +474,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &445740124
 MonoBehaviour:
@@ -781,8 +781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf2f9406cba6514981ebe97eff1c225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minLoopCount: 1
-  maxLoopCount: 3
   UIElement: {fileID: 1644051207}
   distanceText: {fileID: 1447966295}
   player: {fileID: 43727672}
@@ -846,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7310846986523389757, guid: f22b65b9285400a40a374a225a3f4be6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7310846986523389757, guid: f22b65b9285400a40a374a225a3f4be6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1036,7 +1034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.17101006, y: 0.17101006, z: -0.030153684, w: 0.96984637}
-  m_LocalPosition: {x: 26.6, y: 126.5, z: -123.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7372,7 +7370,7 @@ Transform:
   - {fileID: 1205377556}
   - {fileID: 628053867}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5167229788153998090
 PrefabInstance:
