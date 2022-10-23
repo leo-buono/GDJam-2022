@@ -35,7 +35,6 @@ public class VehicleSpawn : MonoBehaviour
         for (int i = 0; cars.Count > 0; i++)
         {
             Destroy(cars.Dequeue());
-            Debug.Log("Deleted Vehicle");
         }
         for (int i = 0; i < carSpawn; i++)
         {
