@@ -10,6 +10,7 @@ public class onCollisionScoreAdd : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && tag != "Used") 
         {
             //add score
+            Score.AddScore(scoreAmount);
             tag = "Used";
         }
     }

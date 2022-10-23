@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI text;
-    private int score = 0;
-
-    public void AddScore(int amount)
+    static public TextMeshProUGUI text;
+    static public int score = 0;
+    void Start()
+    {
+        text = GetComponentInChildren<TextMeshProUGUI>();      
+    }
+    static public void AddScore(int amount)
     {
         score += amount;
-        text.text = score.ToString();
+        text.text = "Score : " + score.ToString();
     }
 }
