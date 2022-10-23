@@ -21,14 +21,11 @@ public class Spedometer : MonoBehaviour
     private float fill = 0f;
     private bool isBouncing = false;
     private float bounceAmount = 0f;
-    private float time = 0f;
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        time += Time.deltaTime;
-
         speed = rb.velocity.magnitude;
         if (!isBouncing)
         {
@@ -63,12 +60,11 @@ public class Spedometer : MonoBehaviour
         }
 
 
-        if (time > 0.1 && (int)speed == (int)bike.GetMaxSpeed())
+        if ((int)speed == (int)bike.GetMaxSpeed())
         {
-            time = 0f;
-            txt.text = Mathf.Floor(Random.Range(bike.GetMaxSpeed(), 99f)) + "m/s";
+            txt.text = Mathf.Floor(Random.Range(bike.GetMaxSpeed(), 99.99f)) + "m/s";
         }
-        else if ((int)speed != (int)bike.GetMaxSpeed())
+        else
         {
             txt.text = Mathf.Floor(speed * spdMult) + "m/s";
         }

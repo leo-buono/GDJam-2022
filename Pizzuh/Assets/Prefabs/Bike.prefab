@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2188978180377991121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -5}
+  m_LocalPosition: {x: 0, y: 2, z: -0.07206488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -187,6 +187,7 @@ MonoBehaviour:
     m_Flags: 0
   rb: {fileID: 6205442582339244655}
   cam: {fileID: 1847618873866612521}
+  followObj: {fileID: 489290039884782516}
   maxSpeed: 20
   minFov: 60
   maxFov: 130
@@ -5019,7 +5020,7 @@ GameObject:
   - component: {fileID: 604506874223656230}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Player
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5031,8 +5032,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2899112284992397569}
-  m_LocalRotation: {x: -0, y: 0.7071069, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -302.62, y: 14.139999, z: 5.0000005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10220,7 +10221,7 @@ MonoBehaviour:
   rotationPoint: {fileID: 6205442582666556553}
   centerOfMass: {fileID: 8095458016190560158}
   rotAngle: 30
-  rotForce: 5
+  rotForce: 4
   fixForce: 5
   jumpForce: 50
   maxSpeed: 25
@@ -10489,7 +10490,7 @@ MonoBehaviour:
     m_Flags: 0
   sensitivity: {x: -5, y: 10}
   autofocusSpeed: {x: 15, y: 45}
-  focusDelay: 2
+  focusDelay: 1
   minX: 0
   maxX: 80
 --- !u!1 &7674306521648491077

@@ -50,14 +50,16 @@ public class BicycleWheel : MonoBehaviour
 			bikeBod.AddRelativeTorque(Vector3.up * bike.angularVelo, ForceMode.Acceleration);
 	}
 
-	private void FixedUpdate() {
+	private void Update() {
 		if (wheelSpeed != 0f) {
-			wheel.localRotation = Quaternion.Euler(wheelSpeed * Time.fixedDeltaTime, 0f, 0f) * wheel.localRotation;
-
-			if (!moving) {
-				wheelSpeed = Mathf.MoveTowards(wheelSpeed, 0f, Time.fixedDeltaTime * decceleration);
-			}
-			moving = false;
+			wheel.localRotation = Quaternion.Euler(wheelSpeed * Time.deltaTime, 0f, 0f) * wheel.localRotation;
 		}
+	}
+
+	private void FixedUpdate() {
+		if (!moving) {
+			wheelSpeed = Mathf.MoveTowards(wheelSpeed, 0f, Time.fixedDeltaTime * decceleration);
+		}
+		moving = false;
 	}
 }

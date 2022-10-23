@@ -15,7 +15,7 @@ public class LoopPosition : MonoBehaviour
 		instance = this;
 	}
 
-	private void Update() {
+	private void LateUpdate() {
 		if (target.position.x > maxX) {
 			target.position += Vector3.left * transposAmt;
 			foreach (Transform trans in otherTargets) {
