@@ -19,8 +19,8 @@ public class RotateCamera : MonoBehaviour
 	private void Awake() {
 		rotX = rotY = 0f;
 		rot.performed += ctx => {
-			//don't move if curos isn't locked
-			if (Cursor.lockState != CursorLockMode.Locked)	return;
+			//don't move if cursor isn't locked
+			if (Cursor.lockState != CursorLockMode.Locked || !enabled)	return;
 
 			input = ctx.ReadValue<Vector2>();
 			rotX = Mathf.Clamp(rotX + input.y * Time.deltaTime * sensitivity.x, minX, maxX);
@@ -37,11 +37,6 @@ public class RotateCamera : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	private void Start() {
-		rotX = rotY = 0f;
-		transform.rotation = Quaternion.identity;
-	}
-
 	private void Update() {
 		if (inputDelay > 0) {
 			inputDelay -= Time.deltaTime;
@@ -55,9 +50,13 @@ public class RotateCamera : MonoBehaviour
 
 	private void OnEnable() {
 		rot.Enable();
+
+		transform.localRotation = Quaternion.Euler(rotX, rotY, 0f);
 	}
 
 	private void OnDisable() {
 		rot.Disable();
+
+		transform.localRotation = Quaternion.identity;
 	}
 }

@@ -14,20 +14,21 @@ public class BicycleController : MonoBehaviour
 	[SerializeField]	Transform rotationPoint;
 	[SerializeField]	Transform centerOfMass;
 	[SerializeField]	float rotAngle = 15f;
-	[SerializeField]	float rotForce = 5f;
+	[SerializeField]    float rotForce = 5f;
 	[SerializeField]	float fixForce = 5f;
 	[SerializeField]	float jumpForce = 5f; //Get it? Because the game
 
 	[SerializeField]	float maxSpeed = 30f;
 
-	[HideInInspector]	public float accelVelo;
+	public float accelVelo = 1f;
 
-	[HideInInspector]	public float angularVelo = 1f;
+	public float angularVelo = 1f;
+
 
 	private void Awake() {
 		rb.centerOfMass = centerOfMass.localPosition;
 
-		angularVelo = 1f;
+		angularVelo = 0f;
 		rotate.performed += ctx => {
 			float angle = ctx.ReadValue<float>();
 			rotationPoint.localRotation = Quaternion.Euler(0f, angle * rotAngle, 0f);
@@ -40,13 +41,9 @@ public class BicycleController : MonoBehaviour
 			angularVelo = 0f;
 		};
 
-		accelVelo = 1f;
-		accelerate.performed += ctx => {
-			accelVelo = (0.5f + ctx.ReadValue<float>());
-		};
-		accelerate.canceled += ctx => {
-			accelVelo = 1f;
-		};
+		accelVelo = 0f;
+		accelerate.performed += ctx => accelVelo = ctx.ReadValue<float>();
+		accelerate.canceled += ctx => accelVelo = 0f;
 
 		jump.started += ctx => 
 		{
@@ -88,6 +85,8 @@ public class BicycleController : MonoBehaviour
 		//clamp speed
 		rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 	}
+
+	public float GetMaxSpeed() { return maxSpeed; }
 
 	int groundedCount = 0;
 	private void OnCollisionEnter(Collision other) {
