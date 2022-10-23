@@ -8,23 +8,23 @@ public class CamFov : MonoBehaviour
 {
 	public InputAction firstPerson;
 	[SerializeField]	Rigidbody rb;
+	CinemachineBrain camBrain;
 	[SerializeField]	CinemachineVirtualCamera cam;
-	Cinemachine3rdPersonFollow follow;
+	[SerializeField]	CinemachineVirtualCamera cam2;
 	[SerializeField]	RotateCamera followObj;
 	[SerializeField]	float maxSpeed = 50f;
 	[SerializeField]	float minFov = 60f;
 	[SerializeField]	float maxFov = 130f;
 	[SerializeField]	float catchupSpeed = 50f;
-	[SerializeField]	float followDistance = 5f;
 
 	private void Awake() {
-		follow = cam.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
+		camBrain = Camera.main.GetComponent<CinemachineBrain>();
 		firstPerson.started += ctx => {
-			follow.CameraDistance = 0.5f;
+			cam2.m_Priority = 100;
 			followObj.enabled = false;
 		};
 		firstPerson.canceled += ctx => {
-			follow.CameraDistance = followDistance;
+			cam2.m_Priority = 0;
 			followObj.enabled = true;
 		};
 	}
@@ -38,7 +38,8 @@ public class CamFov : MonoBehaviour
 	}
 
 	private void Start() {
-		transform.SetParent(null);
+		cam.transform.SetParent(null);
+		cam2.transform.SetParent(null);
 	}
 
     void Update()

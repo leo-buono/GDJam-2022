@@ -21,18 +21,18 @@ public class BicycleWheel : MonoBehaviour
 
 	Vector3 force = Vector3.zero;
 	private void OnTriggerStay(Collider other) {
-		if (disabled)	return;
+		if (disabled || !bike.enabled)	return;
 
 		if (autoAccel) {
 			if (controlled && bike.accelVelo != 0f) {
 				bikeBod.AddForce(transform.forward * bike.speed * (0.5f + bike.accelVelo), ForceMode.Acceleration);
 
-				wheelSpeed = Mathf.Min(wheelSpeed + Time.fixedDeltaTime * acceleration * (0.5f + bike.accelVelo), maxSpeed);
+				wheelSpeed = Mathf.Clamp(wheelSpeed + Time.fixedDeltaTime * acceleration * (0.5f + bike.accelVelo), -maxSpeed, maxSpeed);
 			}
 			else {
 				bikeBod.AddForce(transform.forward * bike.speed, ForceMode.Acceleration);
 
-				wheelSpeed = Mathf.Min(wheelSpeed + Time.fixedDeltaTime * acceleration, maxSpeed);
+				wheelSpeed = Mathf.Clamp(wheelSpeed + Time.fixedDeltaTime * acceleration, -maxSpeed, maxSpeed);
 			}
 
 			moving = true;
@@ -41,13 +41,17 @@ public class BicycleWheel : MonoBehaviour
 		else if (controlled && bike.accelVelo != 0f) {
 			bikeBod.AddForce(transform.forward * bike.speed * bike.accelVelo * 2f, ForceMode.Acceleration);
 
-			wheelSpeed = Mathf.Min(wheelSpeed + Time.fixedDeltaTime * acceleration * bike.accelVelo, maxSpeed);
+			wheelSpeed = Mathf.Clamp(wheelSpeed + Time.fixedDeltaTime * acceleration * bike.accelVelo, -maxSpeed, maxSpeed);
 
 			moving = true;
 		}
 			
-		if (steering)
-			bikeBod.AddRelativeTorque(Vector3.up * bike.angularVelo, ForceMode.Acceleration);
+		if (steering) {
+			if (bike.accelVelo >= 0)
+				bikeBod.AddRelativeTorque(Vector3.up * bike.angularVelo, ForceMode.Acceleration);
+			else
+				bikeBod.AddRelativeTorque(Vector3.down * bike.angularVelo, ForceMode.Acceleration);
+		}
 	}
 
 	private void Update() {

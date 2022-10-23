@@ -15,31 +15,27 @@ public class BicycleController : MonoBehaviour
 	[SerializeField]	Transform centerOfMass;
 	[SerializeField]	float rotAngle = 15f;
 	[SerializeField]    float rotForce = 5f;
+	[SerializeField]    float rotSpeed = 20f;
 	[SerializeField]	float fixForce = 5f;
 	[SerializeField]	float jumpForce = 5f; //Get it? Because the game
-
 	[SerializeField]	float maxSpeed = 30f;
 
-	public float accelVelo = 1f;
+	public float accelVelo = 0f;
 
-	public float angularVelo = 1f;
+	public float angularVelo = 0f;
+	float targetAngularVelo = 0f;
 
 
 	private void Awake() {
 		rb.centerOfMass = centerOfMass.localPosition;
 
 		angularVelo = 0f;
-		rotate.performed += ctx => {
-			float angle = ctx.ReadValue<float>();
-			rotationPoint.localRotation = Quaternion.Euler(0f, angle * rotAngle, 0f);
-
-			angularVelo = angle * rotForce;
+		rotate.started += ctx => {
+			if (targetAngularVelo == angularVelo)
+				StartCoroutine(RotateTire(ctx.ReadValue<float>() * rotForce));
 		};
-		rotate.canceled += ctx => {
-			rotationPoint.localRotation = Quaternion.identity;
-
-			angularVelo = 0f;
-		};
+		rotate.performed += ctx => targetAngularVelo = ctx.ReadValue<float>() * rotForce;
+		rotate.canceled += ctx => targetAngularVelo = 0f;
 
 		accelVelo = 0f;
 		accelerate.performed += ctx => accelVelo = ctx.ReadValue<float>();
@@ -51,6 +47,18 @@ public class BicycleController : MonoBehaviour
 			if (groundedCount > 0)
 				rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 		};
+	}
+
+	IEnumerator RotateTire(float newTarget) {
+		targetAngularVelo = newTarget;
+		float div = rotAngle / rotForce;
+		while (targetAngularVelo != 0f || targetAngularVelo != angularVelo) {
+			angularVelo = Mathf.MoveTowards(angularVelo, targetAngularVelo, Time.deltaTime * rotSpeed);
+
+			rotationPoint.localRotation = Quaternion.Euler(0f, angularVelo * div, 0f);
+			yield return null;
+		}
+		rotationPoint.localRotation = Quaternion.identity;
 	}
 
 	private void OnEnable() {

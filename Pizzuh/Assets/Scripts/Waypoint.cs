@@ -11,10 +11,7 @@ public class Waypoint : MonoBehaviour
 	[SerializeField]	Vector2 boundsPercentY = Vector2.up * 0.8f;
 	[SerializeField]	Vector2 boundsPercentX = Vector2.right * 0.2f + Vector2.up * 0.8f;
 	[SerializeField]	Transform[] doors;
-
-	private void Start() {
-		GenWaypoint();
-	}
+	[SerializeField]	TimeBar time;
 
 	void GenWaypoint() {
 		transform.position = doors[Random.Range(0, doors.Length)].position + Vector3.right * LoopPosition.instance.transposAmt;
@@ -78,6 +75,9 @@ public class Waypoint : MonoBehaviour
 	}
 
 	private void OnTriggerEnter(Collider other) {
+		if (!other.CompareTag("Player"))	return;
+		time.ResetClock();
 		GenWaypoint();
+		player.GetComponent<BicycleController>().enabled = true;
 	}
 }
