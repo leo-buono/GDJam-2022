@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 5620976205261912468}
   - component: {fileID: 1167919261735035423}
   - component: {fileID: -5215697980529145581}
+  - component: {fileID: -8600551520148334846}
   m_Layer: 0
   m_Name: Bus_Silver
   m_TagString: Untagged
@@ -427,6 +428,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adb673fe7d064a41a897943963a096b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8600551520148334846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb784b69acd785b438d2e2b02f01f722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreAmount: 500
 --- !u!1 &189388
 GameObject:
   m_ObjectHideFlags: 0
