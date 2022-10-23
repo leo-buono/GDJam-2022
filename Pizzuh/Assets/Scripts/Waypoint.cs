@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-	public int minLoopCount = 1, maxLoopCount = 3;
 	public RectTransform UIElement;
 	public TMPro.TMP_Text distanceText;
 	[SerializeField]	Transform player;
@@ -18,8 +17,7 @@ public class Waypoint : MonoBehaviour
 	}
 
 	void GenWaypoint() {
-		transform.position = doors[Random.Range(0, doors.Length)].position + Vector3.right *
-			LoopPosition.instance.transposAmt * Random.Range(minLoopCount, maxLoopCount + 1);
+		transform.position = doors[Random.Range(0, doors.Length)].position + Vector3.right * LoopPosition.instance.transposAmt;
 	}
 
 	private void LateUpdate() {

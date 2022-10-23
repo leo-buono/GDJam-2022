@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+	[SerializeField] string gameScene;
     [SerializeField] Vector3 speed = Vector3.one * 5f;
     private void Update()
     {
@@ -13,6 +14,6 @@ public class MainMenu : MonoBehaviour
 
     public void OnPlayClicked()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene(gameScene);
     }
 }
