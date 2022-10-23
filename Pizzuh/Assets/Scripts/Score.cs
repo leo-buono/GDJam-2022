@@ -9,7 +9,7 @@ public class Score : MonoBehaviour
     static public TextMeshProUGUI text;
     static public int score = 0;
     int displayScore = 0;
-	int multiplier = 3;
+	public int multiplier = 3;
 	public Image fire;
 
     void Start()

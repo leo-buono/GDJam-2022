@@ -14,19 +14,33 @@ public class Enemy : MonoBehaviour
 	[SerializeField]	Transform body;
 	Rigidbody rb;
 	Vector3 offset;
+	Quaternion normalRot;
+	Quaternion inverseRot;
 	private void Awake() {
 		realMaxSpeed = maxSpeed;
 		rb = GetComponent<Rigidbody>();
 		offset = body.localPosition;
+		normalRot = body.localRotation;
+		inverseRot = Quaternion.Euler(0f, 180f, 0f) * normalRot;
 	}
 
     // Update is called once per frame
     void Update()
     {
-		if (manager.player.transform.position.x - transform.position.x < minDistance)
-			realMaxSpeed = maxSpeed;
-		else
-			realMaxSpeed = farSpeed;
+		if (manager.player.transform.position.x > transform.position.x) {
+			body.localRotation = normalRot;
+			if (manager.player.transform.position.x - transform.position.x < minDistance)
+				realMaxSpeed = maxSpeed;
+			else
+				realMaxSpeed = farSpeed;
+		}
+		else {
+			body.localRotation = inverseRot;
+			if (transform.position.x - manager.player.transform.position.x < minDistance)
+				realMaxSpeed = -maxSpeed;
+			else
+				realMaxSpeed = -farSpeed;
+		}
 
 		if (speed != realMaxSpeed)
 			speed = Mathf.MoveTowards(speed, realMaxSpeed, Time.deltaTime * acceleration);

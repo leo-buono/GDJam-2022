@@ -12,6 +12,11 @@ public class Waypoint : MonoBehaviour
 	[SerializeField]	Vector2 boundsPercentX = Vector2.right * 0.2f + Vector2.up * 0.8f;
 	[SerializeField]	Transform[] doors;
 	[SerializeField]	TimeBar time;
+	[SerializeField]	int scoreValue = 1000;
+
+	private void Start() {
+		GenWaypoint();
+	}
 
 	void GenWaypoint() {
 		transform.position = doors[Random.Range(0, doors.Length)].position + Vector3.right * LoopPosition.instance.transposAmt;
@@ -79,5 +84,8 @@ public class Waypoint : MonoBehaviour
 		time.ResetClock();
 		GenWaypoint();
 		player.GetComponent<BicycleController>().enabled = true;
+
+		Score.AddScore(scoreValue);
+		GetComponent<AudioSource>().Play();
 	}
 }
