@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1497076440546830934}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontTire
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4319690423905902851}
   - component: {fileID: 7447500011938992458}
   - component: {fileID: 2292786987552770356}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 1769527541742984966}
   - component: {fileID: 1847618873866612521}
   - component: {fileID: 4401824091256074158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CM vcam1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 7388660594286960970}
   - component: {fileID: 2870235617817783923}
   - component: {fileID: 9065662414543794669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.25
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5056,7 +5056,7 @@ GameObject:
   - component: {fileID: 9143347602582427995}
   - component: {fileID: 3798744156653474852}
   - component: {fileID: 7614755541467057041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheel2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5139,7 +5139,7 @@ GameObject:
   - component: {fileID: 2829975612681762267}
   - component: {fileID: 1447359325888836925}
   - component: {fileID: 7393939031574526394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5413,7 +5413,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.25
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9950,7 +9950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7874316348416381562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RotPoint
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -9985,7 +9985,7 @@ GameObject:
   - component: {fileID: 1717849829166048860}
   - component: {fileID: 2653532771230512930}
   - component: {fileID: 7604132571291261059}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10079,7 +10079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8095458016190560158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: COM
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10113,7 +10113,7 @@ GameObject:
   - component: {fileID: 5899122274966737880}
   - component: {fileID: 5282022672856527700}
   - component: {fileID: 6931473105120272159}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10193,7 +10193,7 @@ GameObject:
   - component: {fileID: 6205442582339244655}
   - component: {fileID: 4449031414456953149}
   - component: {fileID: 6205442582339244643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bike
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10426,7 +10426,7 @@ GameObject:
   - component: {fileID: 6205442582500240169}
   - component: {fileID: 6205442582500240170}
   - component: {fileID: 6205442582500240173}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackWheel
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10507,7 +10507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6205442582666556553}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Axle
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10542,7 +10542,7 @@ GameObject:
   - component: {fileID: 6205442582710259934}
   - component: {fileID: 6205442582710259923}
   - component: {fileID: 6205442582710259922}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrotnWheel
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10623,7 +10623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6210089482503557432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackTire
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10656,7 +10656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3089893074744529544}
   - component: {fileID: 8862237174127740788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CM vcam2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10727,7 +10727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2672692606893391236}
   - component: {fileID: 489290039884782516}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraTracking
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10812,7 +10812,7 @@ GameObject:
   - component: {fileID: 2692887950244828679}
   - component: {fileID: 3722975285713881805}
   - component: {fileID: 7971243617386168243}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bike
   m_TagString: Player
   m_Icon: {fileID: 0}

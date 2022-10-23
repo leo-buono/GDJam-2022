@@ -5,21 +5,43 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 	public float acceleration = 5f;
-	public float maxSpeed = 15f;
+	public float maxSpeed = 20f;
+	public float minDistance = 25f;
+	public float farSpeed = 35f;
 	float speed = 0f;
+	float realMaxSpeed = 0f;
 	[SerializeField]	Gamemanager manager;
+	[SerializeField]	Transform body;
+	Rigidbody rb;
+	Vector3 offset;
+	private void Awake() {
+		realMaxSpeed = maxSpeed;
+		rb = GetComponent<Rigidbody>();
+		offset = body.localPosition;
+	}
+
     // Update is called once per frame
     void Update()
     {
-		if (speed < maxSpeed)
-			speed = Mathf.MoveTowards(speed, maxSpeed, Time.deltaTime * acceleration);
+		if (manager.player.transform.position.x - transform.position.x < minDistance)
+			realMaxSpeed = maxSpeed;
+		else
+			realMaxSpeed = farSpeed;
 
-        transform.position += Vector3.right * speed * Time.deltaTime;
+		if (speed != realMaxSpeed)
+			speed = Mathf.MoveTowards(speed, realMaxSpeed, Time.deltaTime * acceleration);
+		
+		rb.velocity = Vector3.right * speed;
+
+		body.localPosition = Vector3.forward * manager.player.transform.position.z + offset;
     }
 
-	private void OnCollisionEnter(Collision other) {
-		if (!other.gameObject.CompareTag("Player")) return;
+	private void OnDisable() {
+		rb.velocity = Vector3.zero;
+	}
 
-		manager.StopGame();
+	private void OnCollisionEnter(Collision other) {
+		if (other.gameObject.CompareTag("Player"))
+			manager.StopGame();
 	}
 }

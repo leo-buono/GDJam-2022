@@ -29,5 +29,6 @@ public class Gamemanager : MonoBehaviour
 	public void StopGame() {
 		player.enabled = false;
 		//give prompt to reset?
+		time.LoseGame();
 	}
 }
