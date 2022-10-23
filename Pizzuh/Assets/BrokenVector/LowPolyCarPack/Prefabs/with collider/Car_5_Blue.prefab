@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 6196354558022624599}
   - component: {fileID: 2530148070398108838}
   - component: {fileID: -4279079756988609349}
+  - component: {fileID: 8722668318956992881}
   m_Layer: 0
   m_Name: Car_5_Blue
   m_TagString: Untagged
@@ -231,6 +232,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adb673fe7d064a41a897943963a096b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8722668318956992881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb784b69acd785b438d2e2b02f01f722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreAmount: 200
 --- !u!1 &166266
 GameObject:
   m_ObjectHideFlags: 0

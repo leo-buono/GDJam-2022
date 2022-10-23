@@ -2,39 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private InputAction g;
-    private TextMeshProUGUI newText;
-    private int score = 0;
-    private bool addingScore = false;
-
-    private void Awake()
+    static public TextMeshProUGUI text;
+    static public int score = 0;
+    int displayScore = 0;
+	int multiplier = 3;
+    void Start()
     {
-        g.started += ctx =>
-        {
-            AddScore(100);
-        };
+        text = GetComponentInChildren<TextMeshProUGUI>();
+		text.text = "Score : 0";
     }
-
-    private void FixedUpdate()
-    {
-        if (addingScore)
-        {
-            newText.GetComponent<RectTransform>().position += new Vector3();
-        }
-    }
-
-    public void AddScore(int amount)
+    static public void AddScore(int amount)
     {
         score += amount;
-        text.text = score.ToString();
-
-        newText = Instantiate(text, gameObject.transform);
-        newText.color = Color.clear;
-        addingScore = true;
     }
+
+	private void Update() {
+		if (score != displayScore) {
+			displayScore += multiplier;
+			if (displayScore > score)
+				displayScore = score;
+        	text.text = "Score : " + displayScore.ToString();
+		}
+	}
 }
