@@ -1268,7 +1268,8 @@ MonoBehaviour:
   player: {fileID: 2026264753}
   lowerRange: {x: -300, y: 0}
   upperRange: {x: 0, y: 300}
-  carCount: 10
+  carLimit: 10
+  carSpawn: 5
 --- !u!4 &834700291
 Transform:
   m_ObjectHideFlags: 0
