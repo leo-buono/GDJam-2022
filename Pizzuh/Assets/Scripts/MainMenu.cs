@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] float speed = 5;
+    [SerializeField] Vector3 speed = Vector3.one * 5f;
     private void Update()
     {
-        transform.rotation = Quaternion.Euler(Time.deltaTime * speed, Time.deltaTime * speed, Time.deltaTime * speed) * transform.rotation;
+        transform.rotation = Quaternion.Euler(speed * Time.deltaTime) * transform.rotation;
     }
 
     public void OnPlayClicked()
