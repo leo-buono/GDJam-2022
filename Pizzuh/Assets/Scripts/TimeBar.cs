@@ -48,9 +48,4 @@ public class TimeBar : MonoBehaviour
 	public void ResetClock() {
 		currenttime = time;
 	}
-
-	public void LoseGame() {
-		start = false;
-		text.text = "You lose, pause to restart";
-	}
 }

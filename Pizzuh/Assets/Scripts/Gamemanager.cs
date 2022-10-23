@@ -10,10 +10,12 @@ public class Gamemanager : MonoBehaviour
 	[SerializeField]	float timeLimit = 30f;
 	public BicycleController player;
 	public Enemy enemy;
+	public GameObject gameOverObj;
 
 	private void Awake() {
 		player.enabled = false;
 		enemy.enabled = false;
+		gameOverObj.SetActive(false);
 
 		startGame.Enable();
 		startGame.started += ctx => {
@@ -29,6 +31,8 @@ public class Gamemanager : MonoBehaviour
 	public void StopGame() {
 		player.enabled = false;
 		//give prompt to reset?
-		time.LoseGame();
+		time.enabled = false;
+
+		gameOverObj.SetActive(true);
 	}
 }
