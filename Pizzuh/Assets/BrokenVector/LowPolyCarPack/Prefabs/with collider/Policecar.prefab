@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreAmount: 200
+  sound: {fileID: 4349405213095975463, guid: e5fe8765fc316b04db40eed3dcecfc2d, type: 3}
 --- !u!1 &193266
 GameObject:
   m_ObjectHideFlags: 0

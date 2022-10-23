@@ -5,6 +5,7 @@ using UnityEngine;
 public class onCollisionScoreAdd : MonoBehaviour
 {
     public int scoreAmount = 0;
+    public AudioSource sound;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player") && tag != "Used") 
@@ -12,6 +13,7 @@ public class onCollisionScoreAdd : MonoBehaviour
             //add score
             Score.AddScore(scoreAmount);
             //Do poppup
+            sound.Play();
             tag = "Used";
         }
     }

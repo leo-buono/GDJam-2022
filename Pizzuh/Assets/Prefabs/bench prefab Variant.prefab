@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreAmount: 50
+  sound: {fileID: 4349405213095975463, guid: 80e430c34408b504bb25120aa35eabb0, type: 3}
 --- !u!114 &3326740184684742868
 MonoBehaviour:
   m_ObjectHideFlags: 0
