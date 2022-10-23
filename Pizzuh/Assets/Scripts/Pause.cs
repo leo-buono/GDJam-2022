@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour
     [SerializeField] private InputAction pause;
     [SerializeField] private GameObject canvas;
     [SerializeField] private float pauseTime = 0.05f;
+    [SerializeField] private string gameScreen = "MainScreen";
     private bool isPaused = false;
 
 
@@ -43,7 +44,9 @@ public class Pause : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene(gameScreen);
+		Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnDestroy()

@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadb3981fe5c1544b91238da7249c669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScene: SampleScene
+  gameScene: MainScreen
   speed: {x: 45, y: 0, z: 45}
 --- !u!1 &2140101420
 GameObject:
