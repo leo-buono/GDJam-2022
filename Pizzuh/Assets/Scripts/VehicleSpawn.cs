@@ -41,6 +41,6 @@ public class VehicleSpawn : MonoBehaviour
             randomPos = Random.Range(lowerRange.x + 10, lowerRange.y - 10);
         else 
             randomPos = Random.Range(upperRange.x + 10, upperRange.y - 10);
-        cars.Enqueue(Instantiate(carList[random], new Vector3(randomPos, 2.5f, Random.Range(-0.5f, 0.5f)), Quaternion.identity));
+            cars.Enqueue(Instantiate(carList[random], new Vector3(randomPos, 2.5f, Random.Range(-3f, 3f)), Quaternion.identity));
     }
 }

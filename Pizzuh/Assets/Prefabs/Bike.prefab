@@ -10294,7 +10294,7 @@ MonoBehaviour:
   wheel: {fileID: 7730950071432910382}
   steering: 0
   controlled: 1
-  autoAccel: 1
+  autoAccel: 0
   acceleration: 200
   decceleration: 500
   maxSpeed: 720
@@ -10410,7 +10410,7 @@ MonoBehaviour:
   wheel: {fileID: 4502880053187072109}
   steering: 1
   controlled: 1
-  autoAccel: 1
+  autoAccel: 0
   acceleration: 200
   decceleration: 500
   maxSpeed: 720
