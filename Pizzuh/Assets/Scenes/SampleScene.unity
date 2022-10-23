@@ -237,6 +237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c44c76453a13c348be3eef96c5ae1de, type: 3}
+--- !u!1 &47890047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6205442582339244652, guid: f80e9d8436487af46835a89638713e64, type: 3}
+  m_PrefabInstance: {fileID: 625169962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &156536569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5167229786380904881, guid: 8c44c76453a13c348be3eef96c5ae1de, type: 3}
@@ -625,6 +630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506385369}
+  - component: {fileID: 506385370}
   m_Layer: 0
   m_Name: Spawn Manager
   m_TagString: Untagged
@@ -647,6 +653,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &506385370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506385368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba6abfd69c3ee146b2c3ad3a5d1911b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carList:
+  - {fileID: 186458, guid: 2f4fc890c388cf84dbafc03669619d42, type: 3}
+  - {fileID: 186458, guid: 74b8b40c5d3c66c408d145d8c7c51c8b, type: 3}
+  - {fileID: 116448, guid: 7ee69ef87f85ae447998d4abab175cf9, type: 3}
+  - {fileID: 160038, guid: 4d4a5328e032911409d8d973eee79df4, type: 3}
+  - {fileID: 160038, guid: 1f4a686b41be99449a540690ab7a6785, type: 3}
+  - {fileID: 129146, guid: 8f0fb4627eb4aed4f9ac1c0ec62fb2ff, type: 3}
+  - {fileID: 140570, guid: d982fd29ce6fdc74b99c0e3d69cbde8b, type: 3}
+  - {fileID: 140570, guid: af1ac63e97bac7443a056ef936b7d425, type: 3}
+  - {fileID: 162266, guid: bbbf9fb7447ddf442a86dd23695ed184, type: 3}
+  - {fileID: 162266, guid: 17683e3ffcde346458c0fa5f35c39b9c, type: 3}
+  - {fileID: 134962, guid: 1bc3a967e1e743b41b30f111c58ba985, type: 3}
+  player: {fileID: 47890047}
+  lowerRange: {x: 0, y: 300}
+  upperRange: {x: 300, y: 600}
+  carCount: 10
 --- !u!4 &513397296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6205442582339244640, guid: f80e9d8436487af46835a89638713e64, type: 3}
