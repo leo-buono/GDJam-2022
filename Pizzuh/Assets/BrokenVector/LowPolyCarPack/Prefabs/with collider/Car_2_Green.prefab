@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 3788339092410717607}
   - component: {fileID: 2635434982951974880}
   - component: {fileID: -7127100452926724336}
+  - component: {fileID: -5068376646595094996}
   m_Layer: 0
   m_Name: Car_2_Green
   m_TagString: Untagged
@@ -329,6 +330,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adb673fe7d064a41a897943963a096b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5068376646595094996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb784b69acd785b438d2e2b02f01f722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreAmount: 200
 --- !u!1 &181436
 GameObject:
   m_ObjectHideFlags: 0
