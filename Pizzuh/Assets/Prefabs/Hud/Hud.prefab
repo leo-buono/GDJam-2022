@@ -280,6 +280,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3023af6948cd941802e57176525794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1439363996508415912}
+  g:
+    m_Name: G
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 3b72eaaf-7800-4bd6-bbdc-4c54e48fe3e8
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 03a96740-b860-442f-8540-139ac37ec32a
+      m_Path: <Keyboard>/g
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: G
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &5882351193687730719
 GameObject:
   m_ObjectHideFlags: 0
