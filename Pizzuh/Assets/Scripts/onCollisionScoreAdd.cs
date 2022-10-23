@@ -11,6 +11,7 @@ public class onCollisionScoreAdd : MonoBehaviour
         {
             //add score
             Score.AddScore(scoreAmount);
+            //Do poppup
             tag = "Used";
         }
     }

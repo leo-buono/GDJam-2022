@@ -1175,6 +1175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 452281512431002227, guid: df339608bc3794d4a92a062e0861ede7, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1816883667}
     - target: {fileID: 1953889541768993170, guid: df339608bc3794d4a92a062e0861ede7, type: 3}
       propertyPath: enemy
       value: 
@@ -1279,6 +1283,10 @@ PrefabInstance:
       propertyPath: bike
       value: 
       objectReference: {fileID: 43727670}
+    - target: {fileID: 9058780252560501514, guid: df339608bc3794d4a92a062e0861ede7, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df339608bc3794d4a92a062e0861ede7, type: 3}
 --- !u!1001 &281439274
@@ -13624,6 +13632,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b663fa714e7e4c348a4f1fe9218c779f, type: 3}
+--- !u!114 &1816883667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1439363996508415912, guid: df339608bc3794d4a92a062e0861ede7, type: 3}
+  m_PrefabInstance: {fileID: 280784269}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1823798980
 PrefabInstance:
   m_ObjectHideFlags: 0
