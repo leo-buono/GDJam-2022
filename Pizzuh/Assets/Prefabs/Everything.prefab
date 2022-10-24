@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8304870336945700574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Side2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6728827796357714823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Side 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826729278288764194}
   - component: {fileID: 3503940098392546312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mexicowall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016222994756904486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sidewalk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8742570877307056611}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sidewalk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3840391963652374191}
   - component: {fileID: 2165335855917344593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mexicowall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10296,22 +10296,6 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotate
       m_Flags: 8
-    - m_Name: positive
-      m_Id: c7623087-33d5-4ba6-8dc4-31404faf4f2c
-      m_Path: <Gamepad>/leftStick/x
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotate
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 6df4695a-3a53-48c7-bf76-1e159c7a4592
-      m_Path: <Gamepad>/leftStick/x
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotate
-      m_Flags: 8
     - m_Name: 
       m_Id: 17fd7528-0897-4e6b-b92c-1112fe735df9
       m_Path: <Gamepad>/leftStick/x
@@ -10403,14 +10387,14 @@ MonoBehaviour:
       m_Action: Jump
       m_Flags: 0
     m_Flags: 0
-  speed: 3
+  speed: 5
   rotationPoint: {fileID: 7874316348416381562}
   centerOfMass: {fileID: 8095458016190560158}
   rotAngle: 30
-  rotForce: 4
+  rotForce: 6
   rotSpeed: 20
-  fixForce: 6
-  jumpForce: 50
+  fixForce: 8
+  jumpForce: 100
   maxSpeed: 25
   accelVelo: 0
   angularVelo: 0
@@ -10425,7 +10409,8 @@ GameObject:
   - component: {fileID: 6205442582500240182}
   - component: {fileID: 6205442582500240169}
   - component: {fileID: 6205442582500240170}
-  - component: {fileID: 6205442582500240173}
+  - component: {fileID: 9081978505573528611}
+  - component: {fileID: 4596153265098791971}
   m_Layer: 7
   m_Name: BackWheel
   m_TagString: Player
@@ -10461,7 +10446,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.3, z: 1.3}
+  m_Size: {x: 0.5, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6205442582500240170
 MonoBehaviour:
@@ -10485,8 +10470,8 @@ MonoBehaviour:
   acceleration: 200
   decceleration: 500
   maxSpeed: 720
---- !u!135 &6205442582500240173
-SphereCollider:
+--- !u!136 &9081978505573528611
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10495,8 +10480,23 @@ SphereCollider:
   m_Material: {fileID: 13400000, guid: cd9f37befa7613c4092c73696ef3d9b3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.3
+  m_Height: 1.25
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &4596153265098791971
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205442582500240183}
+  m_Material: {fileID: 13400000, guid: cd9f37befa7613c4092c73696ef3d9b3, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.25
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6205442582666556566
 GameObject:
@@ -10541,7 +10541,8 @@ GameObject:
   - component: {fileID: 6205442582710259935}
   - component: {fileID: 6205442582710259934}
   - component: {fileID: 6205442582710259923}
-  - component: {fileID: 6205442582710259922}
+  - component: {fileID: 8563399694818833522}
+  - component: {fileID: 6868290912046537791}
   m_Layer: 7
   m_Name: FrotnWheel
   m_TagString: Player
@@ -10577,7 +10578,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.3, z: 1.3}
+  m_Size: {x: 0.5, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6205442582710259923
 MonoBehaviour:
@@ -10601,8 +10602,8 @@ MonoBehaviour:
   acceleration: 200
   decceleration: 500
   maxSpeed: 720
---- !u!135 &6205442582710259922
-SphereCollider:
+--- !u!136 &8563399694818833522
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10611,8 +10612,23 @@ SphereCollider:
   m_Material: {fileID: 13400000, guid: 7a110b9394a6b6a4ba336268b2d4109a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.3
+  m_Height: 1.25
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &6868290912046537791
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6205442582710259932}
+  m_Material: {fileID: 13400000, guid: 7a110b9394a6b6a4ba336268b2d4109a, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.25
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6234746377193848625
 GameObject:

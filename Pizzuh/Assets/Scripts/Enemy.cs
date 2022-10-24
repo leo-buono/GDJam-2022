@@ -58,4 +58,8 @@ public class Enemy : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 			manager.StopGame();
 	}
+
+	public void Pushback() {
+		speed = 0f;
+	}
 }

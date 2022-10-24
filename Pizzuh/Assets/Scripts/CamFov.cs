@@ -16,6 +16,7 @@ public class CamFov : MonoBehaviour
 	[SerializeField]	float minFov = 60f;
 	[SerializeField]	float maxFov = 130f;
 	[SerializeField]	float catchupSpeed = 50f;
+	float fov;
 
 	private void Awake() {
 		camBrain = Camera.main.GetComponent<CinemachineBrain>();
@@ -39,11 +40,16 @@ public class CamFov : MonoBehaviour
 
 	private void Start() {
 		cam.transform.SetParent(null);
+		fov = cam.m_Lens.FieldOfView;
 		cam2.transform.SetParent(null);
 	}
 
     void Update()
     {
-        cam.m_Lens.FieldOfView = Mathf.MoveTowards(cam.m_Lens.FieldOfView, Mathf.Lerp(minFov, maxFov, rb.velocity.sqrMagnitude / (maxSpeed * maxSpeed)), Time.deltaTime * catchupSpeed);
+		if (cam)
+        	cam.m_Lens.FieldOfView = fov = Mathf.MoveTowards(fov, Mathf.Lerp(minFov, maxFov, rb.velocity.sqrMagnitude / (maxSpeed * maxSpeed)), Time.deltaTime * catchupSpeed);
+        if (cam2)
+			cam2.m_Lens.FieldOfView = fov = Mathf.MoveTowards(fov, Mathf.Lerp(minFov, maxFov, rb.velocity.sqrMagnitude / (maxSpeed * maxSpeed)), Time.deltaTime * catchupSpeed);
+		
     }
 }

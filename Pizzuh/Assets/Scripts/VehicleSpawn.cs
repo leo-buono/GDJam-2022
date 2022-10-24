@@ -15,7 +15,7 @@ public class VehicleSpawn : MonoBehaviour
     Queue<GameObject> cars = new Queue<GameObject>();
     Queue<GameObject> cars2 = new Queue<GameObject>();
 
-    private bool isInLowerRange = false;
+    public bool isInLowerRange = true;
     // Update is called once per frame
     void Update()
     {

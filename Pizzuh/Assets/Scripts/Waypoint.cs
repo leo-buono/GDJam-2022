@@ -7,6 +7,7 @@ public class Waypoint : MonoBehaviour
 	public RectTransform UIElement;
 	public TMPro.TMP_Text distanceText;
 	[SerializeField]	Transform player;
+	[SerializeField]	Enemy enemy;
 	[SerializeField]	Camera cam;
 	[SerializeField]	Vector2 boundsPercentY = Vector2.up * 0.8f;
 	[SerializeField]	Vector2 boundsPercentX = Vector2.right * 0.2f + Vector2.up * 0.8f;
@@ -20,6 +21,9 @@ public class Waypoint : MonoBehaviour
 
 	void GenWaypoint() {
 		transform.position = doors[Random.Range(0, doors.Length)].position + Vector3.right * LoopPosition.instance.transposAmt;
+		if (transform.position.x - player.position.x < LoopPosition.instance.transposAmt) {
+			transform.position += Vector3.right * LoopPosition.instance.transposAmt;
+		}
 	}
 
 	private void LateUpdate() {
@@ -85,6 +89,7 @@ public class Waypoint : MonoBehaviour
 		GenWaypoint();
 		player.GetComponent<BicycleController>().enabled = true;
 
+		enemy.Pushback();
 		Score.AddScore(scoreValue);
 		GetComponent<AudioSource>().Play();
 	}
