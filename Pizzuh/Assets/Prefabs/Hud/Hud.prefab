@@ -533,6 +533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 13
   fire: {fileID: 8025941647175827410}
+  popup: {fileID: 6888935907562016931, guid: 47cfbf3d33aa39e49942ebeb9a53eb6d, type: 3}
 --- !u!1 &5882351193687730719
 GameObject:
   m_ObjectHideFlags: 0

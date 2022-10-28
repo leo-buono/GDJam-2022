@@ -3100,6 +3100,7 @@ MonoBehaviour:
   UIElement: {fileID: 1644051207}
   distanceText: {fileID: 1447966295}
   player: {fileID: 43727672}
+  enemy: {fileID: 0}
   cam: {fileID: 8738601}
   boundsPercentY: {x: 0, y: 0.8}
   boundsPercentX: {x: 0.1, y: 0.9}
@@ -10246,6 +10247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bike
       objectReference: {fileID: 0}
+    - target: {fileID: 6205442582339244655, guid: 9eb7de91f04e8b9478f1f8093379f87a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb7de91f04e8b9478f1f8093379f87a, type: 3}
 --- !u!1001 &992615462
@@ -14785,6 +14790,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6205442582339244652, guid: 9eb7de91f04e8b9478f1f8093379f87a, type: 3}
   m_PrefabInstance: {fileID: 986919507}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2026264755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026264753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b4c2533ced50e4db5c54395bb14faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031878903
 GameObject:
   m_ObjectHideFlags: 0
